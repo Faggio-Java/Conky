@@ -1,0 +1,58 @@
+background yes
+double_buffer yes
+alignment bottom_right
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+gap_x 10
+gap_y 30
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_type normal
+own_window_transparent no
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 76
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+minimum_size 170 0
+stippled_borders 0
+update_interval 2.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+use_xft yes
+xftalpha 0.1
+xftfont Droid Sans:size=10
+color0 white
+color1 EAEAEA
+color2 FF0000
+color3 grey
+
+TEXT
+${color2}Host:${color0} $sysname $kernel
+${color2}Sysname:${color0} $nodename
+${color2}User:${color0} ${user_names}
+${color2}CPU1 ${color0} ${hwmon 0 temp 1}°C ${cpu cpu0}% ${color3}${cpubar cpu0 9,}
+${color2}CPU2 ${color0} ${hwmon 0 temp 2}°C ${cpu cpu1}% ${color3}${cpubar cpu1 9,}
+${color2}CPU3 ${color0} ${hwmon 0 temp 3}°C ${cpu cpu2}% ${color3}${cpubar cpu2 9,}
+${color2}CPU4 ${color0} ${hwmon 0 temp 4}°C ${cpu cpu3}% ${color3}${cpubar cpu3 9,}
+
+${color2}RAM ${color0}  ${mem} / ${memmax}
+${membar 5,}
+${color2}Process Name:                   Usage:${color0}
+${top_mem name 1}${alignr}${top_mem mem 1}%
+${top_mem name 2}${alignr}${top_mem mem 2}%
+${top_mem name 3}${alignr}${top_mem mem 3}%
+${top_mem name 4}${alignr}${top_mem mem 4}%
+
